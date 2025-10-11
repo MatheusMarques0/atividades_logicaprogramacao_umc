@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Arrays</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: "Poppins";
+        }
+
+        body{
+            background-image: url(classroom.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        main{
+            position: absolute;
+            top: 30%;
+            left: 60%;
+            margin: 5px;
+            padding: 20px;
+        }
+
+        h1{
+            font-size: 35px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p{
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        label{
+            font-weight: 500;
+        }        
+
+        input{
+            border-radius: 5px;
+            width: 80%;
+            padding: 2px;
+            padding-left: 5px;
+        }
+
+        #name, #nota_alunos{
+            padding: 5px;
+            margin: 10px;
+        }
+
+        #not{
+            padding-right: 10px;
+        }
+
+        button{
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            font-size: 1.05em;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #btn{
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        #botao1:hover{
+            background-color: white;
+            color: darkblue;
+            border: 2px solid darkblue;
+            transition: 0.3s;
+        }
+
+        #botao2{
+            background-color: white;
+            color: darkblue;
+            border: 2px solid darkblue;
+        }
+
+        #botao2:hover{
+            background-color: darkblue;
+            color: white;
+            transition: 0.3s;
+        }
+
+        section{
+            display: inline-block;
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            width: 30vw;
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            text-align: center;
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        th{
+            font-weight: 400;
+            text-align: center;
+            width: 200px;
+        }
+
+        tr{
+            text-align: center;
+        }
+
+        td{
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border-top: 1px solid white;
+        }
+
+        table{
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        #filter, #back{
+            border: 1px solid white;
+            margin-bottom: 10px;
+        }
+
+        #filter:hover, #back:hover{
+            background-color: white;
+            color: darkblue;
+            transition: 0.3s;
+        }
+
+        #container_aprovados, section{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Alunos Aprovados</h2>
+        <div id="container">
+            <table id="cadastrados">
+                <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>NOTA</th>
+                </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <button id="filter">Filtrar Aprovados</button>
+        </div>
+
+        <div id="container_aprovados">
+            <table id="cadastrados">
+                <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>NOTA</th>
+                </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <button id="back">Mostrar todos</button>
+        </div>
+    </section>
+    <main>
+        <h1>Gerenciador de Cadastro</h1>
+        <p>Cadastre alunos e confira os aprovados</p>
+        <form action="">
+            <div id="name">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome do Aluno">
+            </div>
+            <div id="nota_alunos">
+                <label for="nota" id="not">Nota:</label>
+                <input type="number" name="nota" id="nota" placeholder="1-10">
+            </div>
+            <div id="btn">
+                <button type="submit" id="botao1">Cadastrar</button>
+                <button type="submit" id="botao2">Conferir</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
