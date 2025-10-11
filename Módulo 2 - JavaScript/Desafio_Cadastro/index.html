@@ -70,6 +70,7 @@
             font-size: 1.05em;
             border-radius: 10px;
             cursor: pointer;
+            margin-bottom: 15px;
         }
 
         #btn{
@@ -148,11 +149,16 @@
         #container_aprovados, section{
             display: none;
         }
+
+        caption{
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
     </style>
 </head>
 <body>
     <section>
-        <h2>Alunos Aprovados</h2>
+        <h2>Alunos Registrados</h2>
         <div id="container">
             <table id="cadastrados">
                 <thead>
@@ -161,26 +167,27 @@
                     <th>NOTA</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="insert1">
                     
                 </tbody>
             </table>
-            <button id="filter">Filtrar Aprovados</button>
+            <button id="filter" onclick="filtro()">Filtrar Aprovados</button>
         </div>
 
         <div id="container_aprovados">
             <table id="cadastrados">
+                <caption>ALUNOS APROVADOS</caption>
                 <thead>
                 <tr>
                     <th>NOME</th>
                     <th>NOTA</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="insert2">
                     
                 </tbody>
             </table>
-            <button id="back">Mostrar todos</button>
+            <button id="back" onclick="voltar()">Mostrar todos</button>
         </div>
     </section>
     <main>
@@ -196,10 +203,12 @@
                 <input type="number" name="nota" id="nota" placeholder="1-10">
             </div>
             <div id="btn">
-                <button type="submit" id="botao1">Cadastrar</button>
-                <button type="submit" id="botao2">Conferir</button>
+                <button type="button" id="botao1" onclick="cadastro()">Cadastrar</button>
+                <button type="button" id="botao2" onclick="conf()">Conferir</button>
             </div>
+            <p id="sucess"></p>
         </form>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
