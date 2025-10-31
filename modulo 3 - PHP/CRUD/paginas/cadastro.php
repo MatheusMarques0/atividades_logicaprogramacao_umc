@@ -12,7 +12,7 @@
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#">Cadastrar Usuário</a></li>
-                <li><a href="#">Procurar Usuário</a></li>
+                <li><a href="verificarUsuario.php">Procurar Usuário</a></li>
             </ul>
         </nav>
     </header>
@@ -41,7 +41,7 @@
         </form>
 
         <?php 
-        
+        try{
             if($_SERVER["REQUEST_METHOD"] == "POST"){
                 include("../conexao/conexao.php");
 
@@ -65,6 +65,13 @@
                 $stmt-> close();
                 $conn-> close();
             }
+        } 
+        catch(mysqli_sql_execption $e){
+            if(str_countains($e->getMessage(), "Duplicate entry")) {
+                echo "<div class='mensagem erro'>Erro ao cadastrar, Tente novamente mais tarde</div>";
+
+            }
+        }
         ?>
     </main>
 </body>
