@@ -34,7 +34,7 @@
                     $email = $_POST["email"];
 
                     $sql = "SELECT * FROM usuarios WHERE email = ?"; // fazendo a consulta no sql
-                    $stmt = $conn->prepare($sql); // fazendo a coneão com o banco e preparando a consulta sql
+                    $stmt = $conn->prepare($sql); // fazendo a conexão com o banco e preparando a consulta sql
 
                     if ($stmt){ //verifica se a consulta deu certo
                         $stmt->bind_param("s", $email);

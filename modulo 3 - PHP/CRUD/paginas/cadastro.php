@@ -66,8 +66,8 @@
                 $conn-> close();
             }
         } 
-        catch(mysqli_sql_execption $e){
-            if(str_countains($e->getMessage(), "Duplicate entry")) {
+        catch(mysqli_sql_exception $e){
+            if(str_contains($e->getMessage(), "Duplicate entry")) {
                 echo "<div class='mensagem erro'>Erro ao cadastrar, Tente novamente mais tarde</div>";
 
             }
