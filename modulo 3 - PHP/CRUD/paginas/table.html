@@ -11,11 +11,12 @@
         </thead>
         <tbody>
             <tr>
-                <td>{$row["ID"]}</td>
-                <td>{$row["NOME"]}</td>
+                <td>{$row["id"]}</td>
+                <td>{$row["nome"]}</td>
                 <td>{$row["Sobrenome"]}</td>
-                <td><input type='number' name='nota_atividade[{$row['id']}]' required></td>
-                <td><input type='number' name='nota_prova[{$row['id']}]' required></td>
+                <td>{$row["nota_atividade"]}</td>
+                <td>{$row["nota_prova"]}</td>
+                <td>{$row["nota_final"]}</td>
             </tr>
         </tbody>
     </table>
